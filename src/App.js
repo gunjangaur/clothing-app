@@ -1,12 +1,14 @@
 import './App.css';
 import HomePage from './pages/homepage/homepage.component';
-import {Route, Routes} from 'react-router-dom';
+import {Link, Route, Routes, useLocation, useParams} from 'react-router-dom';
 
-const HatsPage = ()=>(
+const HatsPage = ()=>{
+  return(
 <div>
 <h1>HATS PAGE</h1>
 </div>
-)
+);
+}
 
 function App() {
   return (
@@ -18,7 +20,7 @@ function App() {
         {/**exact prop is not required anymore, it will be exact by default. 
     component is replaced in favor of element and we have to pass the element tag as the value */}
         <Route path="/" element={<HomePage />}></Route>
-        <Route path="/hats" element={<HatsPage />}></Route>
+        <Route path="/hats/" element={<HatsPage />}></Route>
       </Routes>
     </div>
   );
