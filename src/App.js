@@ -2,10 +2,12 @@ import './App.css';
 import HomePage from './pages/homepage/homepage.component';
 import {Route, Routes} from 'react-router-dom';
 import ShopPage from './pages/shop/shop.component';
+import Header from './components/header/header.component';
 
 function App() {
   return (
     <div>
+    <Header />
       {/** Earlier switch was used in place of Routes. 
       In v5 Route element could be used in isolation, 
       but from v6 we nee to wrap it inside Routes */}
